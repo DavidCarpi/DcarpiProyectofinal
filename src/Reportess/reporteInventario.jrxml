@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="60a8e370-2c28-4496-9cb2-5fc1bc861a9e">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     inventario.`IDINVENTARIO` AS inventario_IDINVENTARIO,
+     inventario.`IDPRODUCTO` AS inventario_IDPRODUCTO,
+     inventario.`IDPROVEEDOR` AS inventario_IDPROVEEDOR,
+     inventario.`INVFECHACOMPRA` AS inventario_INVFECHACOMPRA,
+     inventario.`INVFECHAELABORACION` AS inventario_INVFECHAELABORACION,
+     inventario.`INVFECHAEXPIRACION` AS inventario_INVFECHAEXPIRACION,
+     inventario.`INVSTOK` AS inventario_INVSTOK,
+     inventario.`invPrecio` AS inventario_invPrecio
+FROM
+     `inventario` inventario]]>
+	</queryString>
+	<field name="inventario_IDINVENTARIO" class="java.lang.Integer"/>
+	<field name="inventario_IDPRODUCTO" class="java.lang.Integer"/>
+	<field name="inventario_IDPROVEEDOR" class="java.lang.Integer"/>
+	<field name="inventario_INVFECHACOMPRA" class="java.sql.Date"/>
+	<field name="inventario_INVFECHAELABORACION" class="java.sql.Date"/>
+	<field name="inventario_INVFECHAEXPIRACION" class="java.sql.Date"/>
+	<field name="inventario_INVSTOK" class="java.lang.Integer"/>
+	<field name="inventario_invPrecio" class="java.math.BigDecimal"/>
+	<group name="inventario_INVFECHAEXPIRACION">
+		<groupExpression><![CDATA[$F{inventario_INVFECHAEXPIRACION}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6" uuid="ca2621b9-d9a8-4eca-9a65-52cd71dafc16"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[inventario_INVFECHAEXPIRACION]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6" uuid="7240ad0b-8f0f-49d1-bac6-e9494fb1a82d"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{inventario_INVFECHAEXPIRACION}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="67ce7445-4bd4-4afd-aed3-aa31ee19ae56"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="d475e14d-709d-49e4-9ef6-8f963c743969"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="747dc999-d45e-47a3-9df3-463275867049"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="b707e174-8994-454b-b94a-4bcedea2b8a1"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="c2637db4-16c0-47e8-a9fc-e32043872604"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="756f9ca8-0984-4785-b862-20393d4c968a"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[inventario_IDINVENTARIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="79" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5b6c12a6-6d92-4676-ad51-627c36fbfb10"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[inventario_IDPRODUCTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="158" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="08a71e46-1953-4f22-a55f-ed53ab744c94"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[inventario_IDPROVEEDOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="237" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f32c6c0a-227a-4380-8a0e-6355a9d6875e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[inventario_INVFECHACOMPRA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="316" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="d5e560a5-1a8e-4acf-a924-051f41ff20d1"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[inventario_INVFECHAELABORACION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="395" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b7c8ad1b-4c9a-47f6-b891-b384fdf1efb4"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[inventario_INVSTOK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="474" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="82a4d78d-0adc-43a9-bd88-9ca8b8e3a0e1"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[inventario_invPrecio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="126a0036-170a-4f63-96ea-ff31065aab27"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="79" height="20" uuid="d88566c7-9eb7-4520-bc33-0ad334305b2c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inventario_IDINVENTARIO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="79" y="0" width="79" height="20" uuid="4f29e73b-a1d5-4bce-bed6-8b84e773e91f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inventario_IDPRODUCTO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="158" y="0" width="79" height="20" uuid="c336e327-e405-4da4-b052-54544a4d5f78"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inventario_IDPROVEEDOR}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="237" y="0" width="79" height="20" uuid="81ffe197-a04a-4d3c-bd8f-8cbbe1edc95f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inventario_INVFECHACOMPRA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="316" y="0" width="79" height="20" uuid="79a76048-287a-4f17-9346-3b624d661206"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inventario_INVFECHAELABORACION}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="395" y="0" width="79" height="20" uuid="00e3fab3-c178-4e2d-927b-01a579b49d7c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inventario_INVSTOK}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="474" y="0" width="79" height="20" uuid="cddc58bc-4a4c-464d-8a55-ae1d9b5ddcee"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inventario_invPrecio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="3ba8a0df-c9f8-4b38-b8d6-4bea488c664d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="8b0cc82c-270f-414d-a476-fefa254c6c59"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="d7645cd0-7e3d-4722-8de9-5f9caca4181c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

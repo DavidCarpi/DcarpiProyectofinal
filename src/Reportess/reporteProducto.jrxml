@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="facfe3d2-009d-44a5-ac21-e41afb47c5f4">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     productos.`IDPRODUCTO` AS productos_IDPRODUCTO,
+     productos.`PRODESCRIPCION` AS productos_PRODESCRIPCION,
+     productos.`PROCODIGO` AS productos_PROCODIGO,
+     productos.`PROUNIDADMEDIDA` AS productos_PROUNIDADMEDIDA,
+     productos.`PROINFORMACIONNUTRICIONAL` AS productos_PROINFORMACIONNUTRICIONAL,
+     productos.`PROOBSERVACION` AS productos_PROOBSERVACION
+FROM
+     `productos` productos]]>
+	</queryString>
+	<field name="productos_IDPRODUCTO" class="java.lang.Integer"/>
+	<field name="productos_PRODESCRIPCION" class="java.lang.String"/>
+	<field name="productos_PROCODIGO" class="java.lang.String"/>
+	<field name="productos_PROUNIDADMEDIDA" class="java.lang.String"/>
+	<field name="productos_PROINFORMACIONNUTRICIONAL" class="java.lang.String"/>
+	<field name="productos_PROOBSERVACION" class="java.lang.String"/>
+	<group name="productos_PROUNIDADMEDIDA">
+		<groupExpression><![CDATA[$F{productos_PROUNIDADMEDIDA}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6" uuid="ffb7282a-0438-45be-a92a-bf4118d9c53f"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[productos_PROUNIDADMEDIDA]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6" uuid="a7389ee1-b2bf-4b53-8c2b-4a5a7716c9e5"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{productos_PROUNIDADMEDIDA}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="f032aade-6161-45d5-9341-a9adee4a1d0d"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="e030f006-3b27-425d-bdca-522693708c68"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="1ab471d0-795e-49c0-a652-d41a5cae54b2"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="62a7e086-d194-4c28-8afe-36e16027a6cf"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="30bd4efa-14d6-4afe-9127-a4b318162bfd"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="90f10eb4-5c2f-46d1-b401-f6d4bd107d3f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[productos_IDPRODUCTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="72733e64-7f4f-4a67-aaa4-4ae8e425d123"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[productos_PRODESCRIPCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="9d45c866-f522-4323-a303-8a2074ea1006"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[productos_PROCODIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a26ebdac-c773-4bb5-933a-f91cda56ec74"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[productos_PROINFORMACIONNUTRICIONAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="d95316b5-f2e4-4b38-bd1e-f4366881aa1e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[productos_PROOBSERVACION]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="cbfcfeca-32b6-4e1c-9e77-d29326706b7c"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="111" height="20" uuid="0a82186f-d486-4413-8151-9ff6d6deb21b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productos_IDPRODUCTO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="111" y="0" width="111" height="20" uuid="67257b6d-a801-4ae4-9372-ee5f398b2743"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productos_PRODESCRIPCION}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="222" y="0" width="111" height="20" uuid="f7750e68-9469-4783-bb0d-b20f6853adbf"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productos_PROCODIGO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="333" y="0" width="111" height="20" uuid="0d87364c-6944-4092-83a1-e205217fb63d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productos_PROINFORMACIONNUTRICIONAL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="444" y="0" width="111" height="20" uuid="38f90602-c78b-4fc7-b2a7-43d196296ef2"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productos_PROOBSERVACION}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="9e21a991-7060-4aea-8fa2-e2ebe0f7e57d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="76c807ee-f761-4fe3-b3e3-f170d6e876cc"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="a44b3581-7fe5-4293-8faf-e30af8d691b4"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="636a100a-0367-47d4-a18e-fd16371740e6">
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     empleados.`IDEMPLEADO` AS empleados_IDEMPLEADO,
+     empleados.`EMPAPELLIDOS` AS empleados_EMPAPELLIDOS,
+     empleados.`EMPNOMBRES` AS empleados_EMPNOMBRES,
+     empleados.`EMPCEDULA` AS empleados_EMPCEDULA,
+     empleados.`EMPCORREO` AS empleados_EMPCORREO,
+     empleados.`EMPTELEFONO` AS empleados_EMPTELEFONO,
+     empleados.`EMPDIRECCION` AS empleados_EMPDIRECCION,
+     empleados.`EMPCARGO` AS empleados_EMPCARGO
+FROM
+     `empleados` empleados]]>
+	</queryString>
+	<field name="empleados_IDEMPLEADO" class="java.lang.Integer"/>
+	<field name="empleados_EMPAPELLIDOS" class="java.lang.String"/>
+	<field name="empleados_EMPNOMBRES" class="java.lang.String"/>
+	<field name="empleados_EMPCEDULA" class="java.lang.String"/>
+	<field name="empleados_EMPCORREO" class="java.lang.String"/>
+	<field name="empleados_EMPTELEFONO" class="java.lang.String"/>
+	<field name="empleados_EMPDIRECCION" class="java.lang.String"/>
+	<field name="empleados_EMPCARGO" class="java.lang.String"/>
+	<group name="empleados_EMPDIRECCION">
+		<groupExpression><![CDATA[$F{empleados_EMPDIRECCION}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6" uuid="f5bb04d5-796d-46c0-898a-d2f2aabab544"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[empleados_EMPDIRECCION]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6" uuid="b8193414-86a9-4ef4-bf0b-5c2de7d4f858"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{empleados_EMPDIRECCION}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="5e8b1a6c-08da-4fa1-88ca-01e7d8290995"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="b36155bf-5312-4ba6-969c-6889ebec0c87"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="d68bf9cc-b90a-4926-83df-c3408c71f70a"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="87cb512c-3306-488b-8390-0b162bc36ff2"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="4b13d0cc-9ef1-4418-9dfc-6fbb35a5b9f3"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="9f1c885e-50c4-44c1-8a9e-e855c61d3171"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[empleados_IDEMPLEADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="79" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="d05209c1-b729-40fe-8456-e996a4ff2410"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[empleados_EMPAPELLIDOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="158" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="ccd2d156-de7e-4388-bedc-43b0896b999f"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[empleados_EMPNOMBRES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="237" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="337e7d4a-85e4-48e7-8bdc-c76a4275acd0"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[empleados_EMPCEDULA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="316" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="01ccf900-1aa9-45b1-8dac-207b2ebbce8e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[empleados_EMPCORREO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="395" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7345deb5-86bd-4aa3-8aca-379d0512f236"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[empleados_EMPTELEFONO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="474" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7e3499af-ca0e-440d-8e5d-10cf60fde84d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[empleados_EMPCARGO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="01cfbcb4-910e-4245-8c00-9d0800d42628"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="79" height="20" uuid="fcf4839f-91b5-44d4-9a70-346607e16148"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empleados_IDEMPLEADO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="79" y="0" width="79" height="20" uuid="8ee94b27-5171-4dea-a082-6a9af79f7b87"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empleados_EMPAPELLIDOS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="158" y="0" width="79" height="20" uuid="de8c179c-75cc-4779-9bc3-f73d2e70e954"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empleados_EMPNOMBRES}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="237" y="0" width="79" height="20" uuid="4f3a6f80-a8f7-48f5-a4ff-d40faa2dca9f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empleados_EMPCEDULA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="316" y="0" width="79" height="20" uuid="2423de7a-0d21-4753-8252-a66e6aad5151"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empleados_EMPCORREO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="395" y="0" width="79" height="20" uuid="ac2c6bb8-ade0-4efd-9a25-99ab91ed6329"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empleados_EMPTELEFONO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="474" y="0" width="79" height="20" uuid="5f79a613-5808-455f-80f5-03ee02227f2d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empleados_EMPCARGO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="8b7b5443-49ad-4bb3-9cf8-72d2b24896f1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="56144945-aa94-4738-8094-22179ee92948"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="7eeca052-8b66-4754-a022-9050626885b5"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
